@@ -1,0 +1,43 @@
+For this lab, you need to represent a graph as an adjacency list, using an STL map where the first element of the pair is a course, and the second element is an STL set of prerequisites.
+
+These are the courses and their prerequisites:
+
+CS A100 => Prerequisites: none
+CS A140 => Prerequisites: CS A100
+CS A150 => Prerequisites: CS A140
+CS A170 => Prerequisites: CS A100
+CS A200 => Prerequisites: CS A150, CS A265
+CS A216 => Prerequisites: CS A100
+CS A220 => Prerequisites: CS A216, CS A250
+CS A250 => Prerequisites: CS A150
+CS A265 => Prerequisites: none
+CS A272 => Prerequisites: CS A170
+The class Graph includes:
+
+All necessary headers
+A global constant string storing the prefix for the course: “CS A”
+All necessary member variables:
+A pointer to an STL map, where
+the first element of the pair is an int
+the second element of the pair is an STL set of type int
+An int storing the total number of courses
+Your job is to implement the following functions where indicated in the given files:
+
+Overloaded insertion operator
+This is a friend function
+Prints each course with all prerequisites.
+Default constructor
+Sets the number of courses to a default value and creates a dynamic STL map.
+The Big 3
+Add at the end of both copy constructor and overloaded assignment operator headers the “noexcept” keyword, to make it work with all compilers.
+Function createGraph
+Parameter: an STL vector of vectors of type int
+Each inner vector stores a course at index 0 followed by its prerequisites.
+Populates the graph by copying the information from the vector of vectors.
+Function printAllCourses
+Prints all the courses (without prerequisites).
+Function printPrerequisites
+Parameter: an int storing a course
+Prints the course and its prerequisites.
+Function clearGraph
+Empties the graph (this function does NOT destroy the object, but only deletes all the courses stored in the graph).
